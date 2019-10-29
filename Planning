@@ -1,9 +1,16 @@
 Ideas for area/perimeter of 2D shapes:
+----------------------------------------------------------------------------------------------------------------
 
-Circle || area =pi * r^2 || perimeter = circumference = 2 * pi * r
-Triangle || area = ½ * base * height || perimeter = a + b + c 
-Square || area = s^2 || perimeter = 4s
-Rectangle || area = l*w || perimeter = 2l + 2w
-Parallelogram || area = b*h || perimeter = 2(a+b)
-Regular pentagon || area = A=¼ 5(5+25)a^2 || perimeter = 5s
-Regular hexagon || area = (3√3)/2 * a^2 || perimeter = 6s
+-Circle || area =pi * r^2 || perimeter = circumference = 2 * pi * r
+
+-Triangle || area = ½ * base * height || perimeter = a + b + c 
+
+-Square || area = s^2 || perimeter = 4s
+
+-Rectangle || area = l*w || perimeter = 2l + 2w
+
+-Parallelogram || area = b*h || perimeter = 2(a+b)
+
+-Regular pentagon || area = A=¼ 5(5+25)a^2 || perimeter = 5s
+
+-Regular hexagon || area = (3√3)/2 * a^2 || perimeter = 6s
