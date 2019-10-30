@@ -1,6 +1,16 @@
 Ask for shape 
 
-if ans = triangle
+if ans = circle
+  what is the radius?
+  circ.area = (pi*r^2)
+  circ.perimeter = (2*pi*r)
+
+else if ans = semicircle
+  what is the radius?
+  semi.area = (pi*r^2)/2
+  semi.perimeter = (2*pi*r)/2 + 2r
+  
+else if ans = triangle
   what is the side lengths and height?
   triangle.area = (base*height)/2
   triangle.perimeter = (side a + side b + side c)
@@ -14,17 +24,12 @@ else if ans = square
   what is the side length?
   square.area = (length^2)
   square.perimeter = (4length)
-
-else if ans = circle
-  what is the radius?
-  circ.area = (pi*r^2)
-  circ.perimeter = (2*pi*r)
-
-else if ans = semicircle
-  what is the radius?
-  semi.area = (pi*r^2)/2
-  semi.perimeter = (2*pi*r)/2 + 2r
   
+else if ans = parallelogram
+  what is the base, height and side length?
+  gram.area = (base*height)
+  gram.perimeter = (2base+2length)
+
 else if ans = pentagon
   what is the side length?
   pent.area = o.25* sqroot(5*(5+2*root5))* length^2
