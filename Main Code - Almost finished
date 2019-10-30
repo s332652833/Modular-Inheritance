@@ -1,0 +1,169 @@
+package modularinheritance;
+/**
+ *
+ * @author S332652833
+ */
+import java.util.Scanner;
+
+public class ModularInheritance {
+    /**
+     * @param args the command line arguments
+     */
+    public static double x = 0;
+        
+    static void quit(String word) {
+        
+        if (word.equalsIgnoreCase("quit")){
+            System.out.println("\nHave a good day, Closing program .......\n........................................\n Process Ended");
+            System.exit(0);
+        }
+    }
+    
+    static void check(double num) {
+        double t = 1;
+        num = 0;
+        Scanner sc = new Scanner(System.in);
+        while (t==1){
+            String input = sc.nextLine();
+            quit(input);
+            try {
+               num = Double.parseDouble(input);
+               if (num > 0) {
+                  t = 0;
+               } else {
+               throw new NumberFormatException();
+               }
+                
+            }
+                catch (NumberFormatException e) {
+                System.out.println("That's not a valid input. Must be a number above 0 ");
+                }
+        } 
+        x = num;
+    }
+
+    public static void main(String[] args) {
+        double a = 0;
+        double b = 0;
+        double c = 0;
+        double h = 0;
+        double r = 0;
+
+    
+        Scanner sc = new Scanner(System.in);
+        
+        while(true){  
+            System.out.println("\nThis program will find the area or perimeter of a shape, type 'quit' at any time to exit program");
+            System.out.println("What shape would you like to find? Circle, SemiCircle, Triangle, Rectangle, Square, Parallelogram, Pentagon, or Hexagon?");
+            String input = sc.nextLine();   
+            quit(input);
+            
+            if(input.equalsIgnoreCase("triangle")){
+                System.out.println("What is the length of the base(bottom side)?");
+                check(b);
+                b = x;
+
+                System.out.println("What is the length of the second side?");
+                check(a);
+                a = x;
+
+                System.out.println("What is the length of the third side?");
+                check(c);
+                c = x;
+
+                System.out.println("What is the height?");
+                check(h);
+                h = x;
+
+                Triangle tri1 = new Triangle(b, h, a, c);
+                tri1.printArea();      
+                tri1.printPerimeter();
+            }    
+
+            else if(input.equalsIgnoreCase("rectangle")) {
+                System.out.println("What is the length of the rectangle?");
+                check(b);
+                b=x;
+
+                System.out.println("What is the length of the rectangle?");
+                check(h);
+                h=x; 
+
+                Rectangle rect1 = new Rectangle(b, h);
+                rect1.printArea();
+                rect1.printPerimeter();
+            }
+
+            else if(input.equalsIgnoreCase("Square")) {
+                System.out.println("What is the side length?");
+                check(b);
+                b=x;
+
+                Rectangle square1 = new Rectangle(b, b);
+                square1.printArea();
+                square1.printPerimeter();
+            }
+
+            else if(input.equalsIgnoreCase("Circle")) {
+                System.out.println("What is the radius?");
+                check(r);
+                r=x;
+
+                Circle circ1 = new Circle(r);
+                circ1.printArea();
+                circ1.printPerimeter();
+            }
+
+            else if(input.equalsIgnoreCase("SemiCircle")) {
+                System.out.println("What is the radius?");
+                check(r);
+                r=x;
+
+                Circle semi1 = new Circle(r);
+                semi1.area = semi1.area/2;
+                semi1.perimeter = (semi1.perimeter/2) + 2*r;
+                semi1.printArea();
+                semi1.printPerimeter();
+            }
+
+            else if(input.equalsIgnoreCase("Parallelogram")) {
+                System.out.println("What is the base?");
+                check(b);
+                b=x;
+
+                System.out.println("What is the height?");
+                check(h);
+                h=x;
+
+                System.out.println("What is the length of the side?");
+                check(a);
+                a=x; 
+
+                Parallelogram gram1 = new Parallelogram(b, h, a);
+                gram1.printArea();
+                gram1.printPerimeter();
+            }
+            else if(input.equalsIgnoreCase("Pentagon")) {
+                System.out.println("What is the side length?");
+                check(a);
+                a=x;
+
+                Pentagon pent1 = new Pentagon(a);
+                pent1.printArea();
+                pent1.printPerimeter();
+            }    
+
+            else if(input.equalsIgnoreCase("Hexagon")) {
+                System.out.println("What is the side length?");
+                check(a);
+                a=x;
+
+                Hexagon hex1 = new Hexagon(a);
+                hex1.printArea();
+                hex1.printPerimeter();
+            }    
+            else
+                System.out.println("invalid input, make sure it is on the list and has no spaces!");
+            }
+        }
+    }
