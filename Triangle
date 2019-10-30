@@ -6,19 +6,10 @@ import java.util.Scanner;
  *
  * @author S332652833
  */
-public class Triangle extends Calc {
+public class Triangle extends Shape {
     
-    public Triangle(double base, double height){
+    public Triangle(double base, double height, double aside, double cside){
         this.area = (base*height)/2;
-
+        this.perimeter = (aside+base+cside);
     }
-    public Triangle(){
-        
-}
-    public void PerimeterCalc(double a, double b, double c){
-        this.perimeter = (a+b+c);
-        this.printPerimeter();
-    }
-    
-    
 }
