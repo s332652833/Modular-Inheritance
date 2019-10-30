@@ -1,0 +1,47 @@
+Ask for shape 
+
+if ans = triangle
+  what is the side lengths and height?
+  triangle.area = (base*height)/2
+  triangle.perimeter = (side a + side b + side c)
+  
+else if ans = rectangle
+  what is the length and width?
+  rect.area = (length*width)
+  rect.perimeter = (2length + 2Width)
+
+else if ans = square
+  what is the side length?
+  square.area = (length^2)
+  square.perimeter = (4length)
+  
+else if ans = square
+  what is the side length?
+  square.area = (length^2)
+  square.perimeter = (4length)
+
+else if ans = circle
+  what is the radius?
+  circ.area = (pi*r^2)
+  circ.perimeter = (2*pi*r)
+
+else if ans = semicircle
+  what is the radius?
+  semi.area = (pi*r^2)/2
+  semi.perimeter = (2*pi*r)/2 + 2r
+  
+else if ans = pentagon
+  what is the side length?
+  pent.area = o.25* sqroot(5*(5+2*root5))* length^2
+  pent.perimeter = (5length)
+  
+else if ans = hexagon
+  what is the side length?
+  hex.area = (3*root3)/2 * length^2
+  hex.perimeter = (6length)
+
+else 
+  invalid input
+  
+print obj.area
+print obj.perimeter
