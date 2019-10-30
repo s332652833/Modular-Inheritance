@@ -4,12 +4,13 @@ package modularinheritance;
  *
  * @author S332652833
  */
-public class Calc {
-    public double area, perimeter = -100;
-    public Calc(){
-        
+public class Shape {
+    public double area, perimeter;
+
+    public Shape(){
+
     }
-    
+
     public void AreaValue(double ar){
         this.area = ar;
     }
@@ -22,4 +23,4 @@ public class Calc {
     public void printPerimeter() {
         System.out.println("The perimeter of the shape is " + Math.round(perimeter));
     }
-}
+    }
